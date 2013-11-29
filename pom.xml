@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.nishi.urlExtractor</groupId>
+    <groupId>org.nishi</groupId>
     <artifactId>urlExtractor</artifactId>
     <version>0.1.0</version>
 
@@ -23,6 +23,19 @@
         <testOutputDirectory>bin/test-classes</testOutputDirectory>
         <sourceDirectory>src/main</sourceDirectory>
         <testSourceDirectory>src/test</testSourceDirectory>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>2.3.2</version>
+                    <configuration>
+                        <source>1.7</source>
+                        <target>1.7</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
     <dependencies>
@@ -48,6 +61,15 @@
             <groupId>org.w3c</groupId>
             <artifactId>dom</artifactId>
             <version>2.3.0-jaxb-1.0.6</version>
+        </dependency>
+
+
+        <!-- For helper methods -->
+        <dependency>
+            <groupId>org.nishi</groupId>
+            <artifactId>java-helper</artifactId>
+            <version>0.1.0</version>
+            <scope>compile</scope>
         </dependency>
 
         <!-- Use bigNumber only if needed
